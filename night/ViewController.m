@@ -15,6 +15,8 @@
 
 @implementation ViewController
 
+
+//  Resize the input image to standard size
 -(UIImage*)imageWithImage:(UIImage*)image{
     UIGraphicsBeginImageContext(CGSizeMake(480, 320));
     [image drawInRect:CGRectMake(0, 0, 480, 320)];
@@ -42,7 +44,6 @@
     }
     int width = [[UIScreen mainScreen]applicationFrame].size.width;
     int height = [[UIScreen mainScreen]applicationFrame].size.height + 20;
-    printf("%d, %d", width,height);
     UIImageView *animationImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
     animationImageView.animationImages = images;
     animationImageView.animationDuration = 3;

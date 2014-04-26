@@ -578,6 +578,8 @@
 		3CF0E5C119036CAB0019AFF0 /* login-button-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CF0E3FB19036CAB0019AFF0 /* login-button-small.png */; };
 		3CF0E5C219036CAB0019AFF0 /* login-button-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CF0E3FC19036CAB0019AFF0 /* login-button-small@2x.png */; };
 		3CFD5DA618FDD4A10071B916 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFD5DA518FDD4A10071B916 /* FriendsViewController.m */; };
+		ACC5A3C3190C4F19007FCA45 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC5A3C2190C4F19007FCA45 /* MapViewController.m */; };
+		ACC5A3C6190C4FB4007FCA45 /* MapAnnotations.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC5A3C5190C4FB4007FCA45 /* MapAnnotations.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1218,6 +1220,10 @@
 		3CF0E3FC19036CAB0019AFF0 /* login-button-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-button-small@2x.png"; sourceTree = "<group>"; };
 		3CFD5DA418FDD4A10071B916 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
 		3CFD5DA518FDD4A10071B916 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
+		ACC5A3C1190C4F19007FCA45 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		ACC5A3C2190C4F19007FCA45 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		ACC5A3C4190C4FB4007FCA45 /* MapAnnotations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotations.h; sourceTree = "<group>"; };
+		ACC5A3C5190C4FB4007FCA45 /* MapAnnotations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotations.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1559,6 +1565,10 @@
 				3CFD5DA518FDD4A10071B916 /* FriendsViewController.m */,
 				3C997E6218FB22050032BFBF /* PlaceViewController.h */,
 				3C997E6318FB22050032BFBF /* PlaceViewController.m */,
+				ACC5A3C1190C4F19007FCA45 /* MapViewController.h */,
+				ACC5A3C2190C4F19007FCA45 /* MapViewController.m */,
+				ACC5A3C4190C4FB4007FCA45 /* MapAnnotations.h */,
+				ACC5A3C5190C4FB4007FCA45 /* MapAnnotations.m */,
 				3C997E6618FB693B0032BFBF /* PhotoWallViewController.h */,
 				3C997E6718FB693B0032BFBF /* PhotoWallViewController.m */,
 				3C2B40EB18F4DB4B0076A763 /* MessageViewController.h */,
@@ -2715,6 +2725,7 @@
 				3C997E4C18FB1E3F0032BFBF /* MGObserver.m in Sources */,
 				3C2175D71900A58C00067348 /* PostHeaderView.m in Sources */,
 				3C2B40B718F4DA6D0076A763 /* JSBubbleView.m in Sources */,
+				ACC5A3C6190C4FB4007FCA45 /* MapAnnotations.m in Sources */,
 				3C2B40BD18F4DA6D0076A763 /* JSMessageTableView.m in Sources */,
 				3C997E5B18FB1E3F0032BFBF /* MGScrollView.m in Sources */,
 				3C2B40B218F4DA6D0076A763 /* UIColor+JSMessagesView.m in Sources */,
@@ -2723,6 +2734,7 @@
 				3C95360318FA169800356EDB /* ProfileViewController.m in Sources */,
 				3CFD5DA618FDD4A10071B916 /* FriendsViewController.m in Sources */,
 				3C997E1B18FB0B7C0032BFBF /* ContactTableViewCell.m in Sources */,
+				ACC5A3C3190C4F19007FCA45 /* MapViewController.m in Sources */,
 				3C997E5C18FB1E3F0032BFBF /* MGTableBox.m in Sources */,
 				3C997E4A18FB1E3F0032BFBF /* MGBlockWrapper.m in Sources */,
 				3C997E6818FB693B0032BFBF /* PhotoWallViewController.m in Sources */,

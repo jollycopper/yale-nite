@@ -283,10 +283,10 @@
             </objects>
             <point key="canvasLocation" x="1478" y="753"/>
         </scene>
-        <!--View Controller - Places Near You-->
+        <!--Map View Controller - Places Near You-->
         <scene sceneID="Vci-vf-IsE">
             <objects>
-                <viewController id="HTw-Ut-9k6" sceneMemberID="viewController">
+                <viewController id="HTw-Ut-9k6" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JRk-bX-XUO"/>
                         <viewControllerLayoutGuide type="bottom" id="PL4-2e-UAf"/>
@@ -298,11 +298,15 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qof-SO-KoG">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="tintColor" red="0.15338576850705832" green="0.29170342813613981" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Places Near You" id="MsQ-V9-huR"/>
+                    <connections>
+                        <outlet property="mapView" destination="Qof-SO-KoG" id="0Eh-UM-5xA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXC-ht-Mv1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
