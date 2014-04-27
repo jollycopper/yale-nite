@@ -13,4 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet AGMedallionView *roundedProfileImage;
 @property (weak, nonatomic) IBOutlet UIImageView *coverImage;
+@property (weak, nonatomic) IBOutlet UILabel *numOfPhoto;
+@property (weak, nonatomic) IBOutlet UILabel *numOfFriend;
+
 @end

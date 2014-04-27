@@ -8,6 +8,7 @@
 
 #import "ProfileViewController.h"
 #import <Parse/Parse.h>
+#include <stdlib.h>
 
 @interface ProfileViewController ()
 
@@ -37,6 +38,15 @@
         self.roundedProfileImage.image = image;
         [self.roundedProfileImage layoutIfNeeded];
     }];
+    
+    //add photo & friend num
+    int pNum = arc4random_uniform(5);
+    int fNum = arc4random_uniform(4);
+    self.numOfPhoto.text = [NSString stringWithFormat:@"%@: %d", @"Photo", pNum];
+    self.numOfFriend.text = [NSString stringWithFormat:@"%@: %d", @"Friend", fNum];
+    [self.numOfPhoto sizeToFit];
+    [self.numOfFriend sizeToFit];
+    
 }
 
 - (IBAction)onLogoutTouched:(id)sender {
