@@ -306,6 +306,7 @@
                     <navigationItem key="navigationItem" title="Places Near You" id="MsQ-V9-huR"/>
                     <connections>
                         <outlet property="mapView" destination="Qof-SO-KoG" id="0Eh-UM-5xA"/>
+                        <segue destination="ahl-xc-a0O" kind="push" identifier="push_from_map" id="LSk-ce-Bbq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXC-ht-Mv1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -435,4 +436,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="LSk-ce-Bbq"/>
+    </inferredMetricsTieBreakers>
 </document>

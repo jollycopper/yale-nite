@@ -14,7 +14,7 @@
 
 @property (strong, nonatomic) NSString *title;
 @property (nonatomic,assign) CLLocationCoordinate2D coordinate;
-
+@property (nonatomic) NSString* pfObjectId;
 -(id) initWithCoordinate:(CLLocationCoordinate2D)coordinate title:(NSString *)title;
 
 @end

@@ -8,6 +8,8 @@
 
 #import "MapViewController.h"
 #import "MapAnnotations.h"
+#import <Parse/Parse.h>
+#import "PhotoWallViewController.h"
 
 #define METERS_PER_MILE 1609.344
 
@@ -29,30 +31,35 @@
     coordinate1.latitude = 41.304534;
     coordinate1.longitude = -72.926257;
     MapAnnotations *annotation1 = [[MapAnnotations alloc] initWithCoordinate:coordinate1 title:@"116 Crown"];
+    annotation1.pfObjectId = @"FxkZXV61Kd";
     [self.mapView addAnnotation:annotation1];
     
     CLLocationCoordinate2D coordinate2;
     coordinate2.latitude = 41.311525;
     coordinate2.longitude = -72.929586;
     MapAnnotations *annotation2 = [[MapAnnotations alloc] initWithCoordinate:coordinate2 title:@"Toad's Place"];
+    annotation2.pfObjectId = @"yB3BKeVnJy";
     [self.mapView addAnnotation:annotation2];
     
     CLLocationCoordinate2D coordinate3;
     coordinate3.latitude = 41.309384;
     coordinate3.longitude = -72.931854;
     MapAnnotations *annotation3 = [[MapAnnotations alloc] initWithCoordinate:coordinate3 title:@"Gpscy Bar"];
+    annotation3.pfObjectId = @"WvbF4xTxsb";
     [self.mapView addAnnotation:annotation3];
     
     CLLocationCoordinate2D coordinate4;
     coordinate4.latitude = 41.307956;
     coordinate4.longitude = -72.922231;
     MapAnnotations *annotation4 = [[MapAnnotations alloc] initWithCoordinate:coordinate4 title:@"Christy's Irish Pub"];
+    annotation4.pfObjectId = @"6a9O3DMdoC";
     [self.mapView addAnnotation:annotation4];
     
     CLLocationCoordinate2D coordinate5;
     coordinate5.latitude = 41.306182;
     coordinate5.longitude = -72.930003;
     MapAnnotations *annotation5 = [[MapAnnotations alloc] initWithCoordinate:coordinate5 title:@"Bar"];
+    annotation5.pfObjectId =  @"SuqGT2Iw7Z";
     [self.mapView addAnnotation:annotation5];
     
     myAnnotations = [NSMutableArray arrayWithObjects:annotation1,annotation2,annotation3,annotation4,annotation5,nil];
@@ -102,20 +109,23 @@
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
-    //printf("tapped\n");
-    //[self performSegueWithIdentifier:@"DetailsIphone" sender:view];
+    PFQuery* query = [PFQuery queryWithClassName:@"Location"];
+    MapAnnotations* mapAnno = view.annotation;
+    [query whereKey:@"objectId" equalTo:mapAnno.pfObjectId];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError* error){
+        if (objects.count == 0) {
+            return;
+        }
+        [self performSegueWithIdentifier:@"push_from_map" sender:objects[0]];
+    }];
 }
 
-
-/*
-#pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    PhotoWallViewController* pvc = [segue destinationViewController];
+    pvc.currentLocation = sender;
 }
-*/
 
 @end
