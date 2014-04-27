@@ -55,6 +55,8 @@
     MapAnnotations *annotation5 = [[MapAnnotations alloc] initWithCoordinate:coordinate5 title:@"Bar"];
     [self.mapView addAnnotation:annotation5];
     
+    myAnnotations = [NSMutableArray arrayWithObjects:annotation1,annotation2,annotation3,annotation4,annotation5,nil];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -84,6 +86,7 @@
     
     static NSString *identifier = @"MapAnnotations";
     MKPinAnnotationView * annotationView = (MKPinAnnotationView*)[self.mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+
     if (!annotationView)
     {
         annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
@@ -96,6 +99,13 @@
     annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     return annotationView;
 }
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    //printf("tapped\n");
+    //[self performSegueWithIdentifier:@"DetailsIphone" sender:view];
+}
+
 
 /*
 #pragma mark - Navigation

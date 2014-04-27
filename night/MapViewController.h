@@ -10,7 +10,9 @@
 #import <MapKit/MapKit.h>
 
 @interface MapViewController : UIViewController <MKMapViewDelegate>
+{
+    NSMutableArray *myAnnotations;
+}
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
-
 @end
