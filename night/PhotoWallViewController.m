@@ -170,7 +170,7 @@
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     chosenImage = [self imageByCroppingImage:chosenImage];
     NSData *imageData = UIImageJPEGRepresentation(chosenImage, 0.4);
-    PFFile *imageFile = [PFFile fileWithData:imageData];
+    PFFile *imageFile = [PFFile fileWithName:@"post.jpg" data:imageData];
     [imageFile saveInBackground];
     
     PFObject *userPost = [PFObject objectWithClassName:@"Post"];
