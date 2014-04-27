@@ -27,7 +27,7 @@
         self.pullToRefreshEnabled = YES;
         
         // Whether the built-in pagination is enabled
-        self.paginationEnabled = YES;
+        self.paginationEnabled = NO;
         
         // The number of objects to show per page
         self.objectsPerPage = 5;
